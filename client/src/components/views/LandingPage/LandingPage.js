@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 function LandingPage(props) {
   useEffect(() => {
@@ -26,11 +27,11 @@ function LandingPage(props) {
         height: '100vh',
       }}
     >
-      <h2>Landng Page</h2>
+      <h2>Landing Page</h2>
 
       <button onClick={onClickHandler}>Log out</button>
     </div>
   );
 }
 
-export default LandingPage;
+export default withRouter(LandingPage);
